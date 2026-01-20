@@ -121,7 +121,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: !Sub "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64}}"
-      InstanceType: t2.micro
+      InstanceType: t3.micro
       KeyName: !Ref KeyPairName
       SecurityGroupIds: [!Ref EC2SecurityGroup]
       SubnetId: !Ref PublicSubnet1
@@ -147,7 +147,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: !Sub "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64}}"
-      InstanceType: t2.micro
+      InstanceType: t3.micro
       KeyName: !Ref KeyPairName
       SecurityGroupIds: [!Ref EC2SecurityGroup]
       SubnetId: !Ref PublicSubnet2
